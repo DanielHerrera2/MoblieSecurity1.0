@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LET'S GO FISHING</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        #search-container {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>LET'S GO FISHING</h1>
+
+    <div id="search-container">
+        <input type="text" id="search-bar" placeholder="Enter your search...">
+        <button onclick="searchData()">Search</button>
+    </div>
+
+    <script>
+        function searchData() {
+            // Get the data inputted by the user
+            const userInput = document.getElementById('search-bar').value;
+            
+            // For now, just alert the input. You can replace this with actual search functionality.
+            alert('You searched for: ' + userInput);
+        }
+    </script>
+</body>
+</html>
