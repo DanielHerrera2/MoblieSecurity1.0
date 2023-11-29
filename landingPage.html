@@ -5,31 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LET'S GO FISHING</title>
     <link rel="stylesheet" href="landingPage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <script src="script.js"></script>
 </head>
+
 <body>
+    <div id="banner">
     <h1>LET'S GO FISHING</h1>
+    </div>
+    
+        <div id="navbar">
+            <!-- <a>LET'S GO PHISHING</a> -->
+            <!-- <a href="#about-us">ABOUT US</a>
+            <a href="https://owasp.org/www-project-top-ten/">OWASP TOP TEN</a>
+            <a href="#solutions">SOLUTIONS</a> -->
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="about.html" style="color: white;">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://owasp.org/www-project-top-ten/" style="color: white;">OWASP TOP TEN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="SOLUTIONS" style="color: white;">SOLUTIONS</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
-    <div id="navbar">
-        <a href="#about-us">ABOUT US</a>
-        <a href="#owasp-top-ten">OWASP TOP TEN</a>
-        <a href="#solutions">SOLUTIONS</a>
+    <div id="parent-box">
+        <div id="search-container">
+            <input type="text" id="search-bar" placeholder="Enter your URL/E-mail...">
+            <button onclick="searchData()" id="search-button">Search</button>
     </div>
 
-    <div id="search-container">
-        <input type="text" id="search-bar" placeholder="Enter your URL/E-mail...">
-        <button onclick="searchData()">Search</button>
+        <div id="display-box">
+            <strong>Original URL:</strong>
+            <span id="original-url"></span>
+            <hr>
+            <strong>Status:</strong>
+            <span id="status-check"></span>
+        </div>
     </div>
-
-    <div id="display-box">
-        <strong>Original URL:</strong>
-        <span id="original-url"></span>
-        <hr>
-        <strong>Status:</strong>
-        <span id="status-check"></span>
-
-
-    </div>
+    
 
 </body>
 </html>
+
