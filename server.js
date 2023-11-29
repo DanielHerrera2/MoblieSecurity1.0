@@ -20,10 +20,21 @@ app.get('/', (req, res) => {
 // API endpoint to analyze URL/email
 app.post('/analyze', (req, res) => {
   const userInput = req.body.url;
-  // Implement your URL analysis logic here
-  // For now, let's just send back a dummy response
-  res.json({ status: 'URL analysis result goes here' });
+
+  // Placeholder for URL analysis logic
+  const analysisResult = analyzeURL(userInput);
+
+  // Send back the analysis result
+  res.json({ status: analysisResult });
 });
+
+// Function to analyze the URL (placeholder implementation)
+function analyzeURL(url) {
+  // Implement your phishing detection logic here
+  // Return a string indicating the result, e.g., 'Safe', 'Phishing', etc.
+  // This is a placeholder implementation
+  return 'Safe'; // Replace this with real logic
+}
 
 // Start the server
 app.listen(port, () => {
