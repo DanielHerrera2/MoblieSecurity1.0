@@ -16,44 +16,30 @@
 
 <body>
     <div id="banner">
-    <h1>LET'S GO FISHING</h1>
-
-        <div id="navbar">
-            <!-- <a>LET'S GO PHISHING</a> -->
-            <!-- <a href="#about-us">ABOUT US</a>
-            <a href="https://owasp.org/www-project-top-ten/">OWASP TOP TEN</a>
-            <a href="#solutions">SOLUTIONS</a> -->
-            <nav>
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="about.html" style="color: white;">ABOUT US</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://owasp.org/www-project-top-ten/" style="color: white;">OWASP TOP TEN</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="SOLUTIONS" style="color: white;">SOLUTIONS</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-
-    <div id="parent-box">
-        <div id="search-container">
-            <input type="text" id="search-bar" placeholder="Enter your URL/E-mail...">
-            <button onclick="checkURL(document.getElementById('search-bar').value)" id="search-button">Search</button>
+        <h1>LET'S GO FISHING</h1>
     </div>
 
-        <div id="display-box">
-            <strong>Original URL:</strong>
-            <span id="original-url"></span>
-            <hr>
-            <strong>Status:</strong>
-            <span id="status-check"></span>
-        </div>
+    <div id="navbar">
+        <a href="about.html">ABOUT US</a>
+        <!-- Corrected link to OWASP TOP TEN -->
+        <a href="https://owasp.org/www-project-top-ten/" style="color: white;">OWASP TOP TEN</a>
+        <a href="#solutions">SOLUTIONS</a>
     </div>
 
-        <script>
+    <div id="search-container">
+        <input type="text" id="search-bar" placeholder="Enter your URL/E-mail...">
+        <button onclick="searchData()">Search</button>
+    </div>
+
+    <div id="display-box">
+        <strong>Original URL:</strong>
+        <span id="original-url"></span>
+        <hr>
+        <strong>Status:</strong>
+        <span id="status-check"></span>
+    </div>
+
+    <script>
         function searchData() {
             // Get the data inputted by the user
             const userInput = document.getElementById('search-bar').value;
@@ -63,16 +49,14 @@
 
             // Simple check if URL starts with 'http://' or 'https://'
             if (userInput.startsWith('http://') || userInput.startsWith('https://')) {
-                document.getElementById('status-check').textContent = 'Good';
+                document.getElementById('status-check').textContent = 'Probably Good';
                 document.getElementById('status-check').style.color = 'green';
             } else {
-                document.getElementById('status-check').textContent = 'Bad';
+                document.getElementById('status-check').textContent = 'Probably Bad';
                 document.getElementById('status-check').style.color = 'red';
             }
         }
     </script>
-    
 
 </body>
 </html>
-
